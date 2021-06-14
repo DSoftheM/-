@@ -30,7 +30,10 @@
       myCmiWindow.useFrontAsTop = true;
       myCmiWindow.setNotificationHandler(OnCmiNotification);
       myCmiWindow.handleArrowKeys = false;
-      myCmiWindow.loadModelFromUrl("NoName.wpm");
+      if (localStorage.getItem('l') == 1)
+        myCmiWindow.loadModelFromUrl("NoName2.wpm");
+      if (localStorage.getItem('xs') == 1)
+        myCmiWindow.loadModelFromUrl("NoName.wpm");
       myCmiWindow.switchToPerspective(true);
       myCmiWindow.setMouseModeToRotation();
     }
@@ -61,7 +64,7 @@
         case "ModelDisplayed":
           if ((!myCmiWindow) || (!myCmiWindow.isUsable))
             return;
-          myCmiWindow.rotateSceneAbsolut(0, 0, 0, true);
+          myCmiWindow.rotateSceneAbsolut(90, 30, 0, true);
           myCmiWindow.zoomAll();
           break;
         case "EntitySelectionHighlight":

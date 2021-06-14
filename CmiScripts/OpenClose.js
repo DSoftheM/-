@@ -8,12 +8,12 @@ function showHide(element_id) {
 			if (obj.style.display != "block") 
 			{ 
 				obj.style.display = "block"; //Показываем элемент
-				buttonText.textContent = "HIDE MODEL";
+				buttonText.textContent = "СКРЫТЬ МОДЕЛЬ";
 			}
 			else 
 			{
 				obj.style.display = "none"; //Скрываем элемент
-				buttonText.textContent = "VIEW MODEL";
+				buttonText.textContent = "ПРИМЕРИТЬ";
 			}
 		}
 		//Если элемент с id-шником element_id не найден, то выводим сообщение
